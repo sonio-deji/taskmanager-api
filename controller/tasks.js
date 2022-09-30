@@ -9,7 +9,7 @@ const getTasks = asyncWrapper(async (req, res) => {
 });
 
 const createTasks = asyncWrapper(async (req, res) => {
-  const task = await Task.create(req.body.name);
+  const task = await Task.create(req.body);
   res.status(201).json({ task });
 });
 const getTask = asyncWrapper(async (req, res, next) => {
