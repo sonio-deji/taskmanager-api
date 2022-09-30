@@ -5,6 +5,7 @@ const { createCustomError } = require("../errors/custom-errors");
 const getTasks = asyncWrapper(async (req, res) => {
   const tasks = await Task.find({});
   res.status(200).json({ tasks });
+  res.send("app is running");
 });
 
 const createTasks = asyncWrapper(async (req, res) => {
